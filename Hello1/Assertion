@@ -1,9 +1,0 @@
-assertEquals: This provides a series of overloads that allows you to test if an actual value matches the expected one.
-assertFalse: Use this if you know the function will always return false (fails if it receives true)
-assertNotNull: If your method return null in the event of failure use this to check to see if it succeeds
-assertNotSame: If your method is supposed to return an element from a list you can use this to check if the element returned is the one from the actual list
-assertNull: If your method return null in the event of failure use this to check to see if it fails
-fail: Will fail the test, use this in conjunction with conditionals
-failNotEquals: Essentially the same as assertEquals but will fail the test if they arent equal instead of causing an error
-failNotSame: Essentially the same as assertNotSame except instead of causing an error it will cause a failure
- 
