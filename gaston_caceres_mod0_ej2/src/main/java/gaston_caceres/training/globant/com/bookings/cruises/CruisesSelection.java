@@ -57,4 +57,8 @@ public class CruisesSelection {
 		}
 	}
 	
+	public boolean isSimpleFilter(){
+		return filter.isSimpleFilter();
+	}
+	
 }

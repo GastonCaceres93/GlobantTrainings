@@ -78,13 +78,21 @@ public class CruisesBooking {
 
 	public boolean validCruiseSearch() {
 		boolean valid = false;
-		String destinationFilter = new Select(webDriver.findElement(By.xpath(".//*[@Id='menu-content-destination']"))).getFirstSelectedOption().getAttribute("value");
-		String dateFilter = new Select(webDriver.findElement(By.xpath(".//*[@Id='menu-content-departure-month']"))).getFirstSelectedOption().getAttribute("value");
-		Date dateFiltered = parseDate(dateFilter, "yyyy-MM-dd");
-			if (destinationFilter.equals(cruise.getDestination().value())
-					&& cruise.getDepartureDate().equals(dateFiltered)) {
-				valid = true;
-			}
+		String destinationFilter = null;
+		String dateFilter =null;
+		Date dateFiltered = null;
+		if(cruiseSelection().isSimpleFilter()){
+			destinationFilter = new Select(webDriver.findElement(By.xpath(".//*[@Id='menu-content-destination']"))).getFirstSelectedOption().getAttribute("value");
+			dateFilter = new Select(webDriver.findElement(By.xpath(".//*[@Id='menu-content-departure-month']"))).getFirstSelectedOption().getAttribute("value");
+		}else{
+			destinationFilter = webDriver.findElement(By.xpath(".//*[@Id='menu-selection-destination']/div")).getAttribute("data-value");
+			dateFilter = webDriver.findElement(By.xpath(".//*[@id='menu-selection-departure-month']/div")).getAttribute("data-value");
+		}
+		dateFiltered = parseDate(dateFilter, "yyyy-MM-dd");
+		if (destinationFilter.equals(cruise.getDestination().value())
+				&& cruise.getDepartureDate().equals(dateFiltered)) {
+			valid = true;
+		}
 		return valid;
 	}
 
