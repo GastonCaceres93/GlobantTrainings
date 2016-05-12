@@ -73,10 +73,9 @@ public class ValidatePage {
 	private boolean validateCompleteText(ElementToValidate element) {
 		try {
 			WebElement webEl = (new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(element.locator())));
-			System.out.println(element.value()+"=="+webEl.getText());
 			return element.value() != null && element.value().equalsIgnoreCase(webEl.getText());
 		} catch (Exception e) {
-			System.out.print("validateCompleteText");
+			System.out.println("validateCompleteText failed for");
 			return false;
 		}
 	}
@@ -86,7 +85,7 @@ public class ValidatePage {
 			WebElement webEl = (new WebDriverWait(webDriver, 10).until(ExpectedConditions.presenceOfElementLocated(element.locator())));
 			return element.value() != null && webEl.getText().contains(element.value());
 		} catch (Exception e) {
-			System.out.print("validatePartialText");
+			System.out.println("validatePartialText failed for");
 			e.printStackTrace();
 			return false;
 		}
@@ -99,7 +98,7 @@ public class ValidatePage {
 			WebElement element = (new WebDriverWait(webDriver, 20).until(ExpectedConditions.presenceOfElementLocated(locator)));
 			return true;
 		}catch (Exception e) {
-			System.out.print("isElementPresent");
+			System.out.println("isElementPresent failed for");
 			return false;
 		}
 	}

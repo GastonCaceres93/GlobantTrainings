@@ -28,9 +28,8 @@ public class FlightReview {
 	}
 
 	public WhoIsTraveling continueBooking() {
-		new WebDriverWait(webDriver, 3)
-				.until(ExpectedConditions.presenceOfElementLocated(By.id("FlightUDPBookNowButton1"))).click();
-		return new WhoIsTraveling(webDriver);
+		new WebDriverWait(webDriver, 3).until(ExpectedConditions.presenceOfElementLocated(By.id("FlightUDPBookNowButton1"))).click();
+		return new WhoIsTraveling();
 	}
 
 	public Set<ElementToValidate> getElementsToValidateFlightReviewPage(FlightInfo flightInfo) {
