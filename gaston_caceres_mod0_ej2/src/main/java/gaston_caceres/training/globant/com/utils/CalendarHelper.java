@@ -68,7 +68,6 @@ public class CalendarHelper {
 		return getCalendar(date) != null;
 	}
 
-	//TODO buscar mejor forma de lidiar con fecha localizada (Apr 2016 vs Abr 2016)
 	private String getDateFormated(DateTime date, String format) {
 		return  new SimpleDateFormat(format,Locale.ENGLISH).format(date.toDate());
 	}

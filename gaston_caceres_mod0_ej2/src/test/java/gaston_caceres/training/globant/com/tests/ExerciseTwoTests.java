@@ -207,24 +207,5 @@ public class ExerciseTwoTests {
 	public void after() {
 		this.travelocityHome.quit();
 	}
-//	
-//	public static void main(String []args){
-//		
-//		TravelocityHome travelocityHome = new TravelocityHome(new FirefoxDriver());
-//		CruisesBooking cruisesBooking = travelocityHome.goHome().goCruising();
-//		cruisesBooking.selectDestination(Destinations.EUROPE);
-//		cruisesBooking.selectDepartureMonth("07 2017");
-//
-//		cruisesBooking.search();
-//		
-//		assert(cruisesBooking.validCruiseSearch());
-//		
-//		cruisesBooking.cruiseSelection().filterByLenght(CruiseLenght.TEN_TO_FOURTEEN_NIGHTS);
-//		cruisesBooking.cruiseSelection().selectCruise(1);
-//		assert (cruisesBooking.cruiseSelection().isItineraryVisible());
-//		
-//		travelocityHome.quit();
-//		
-//	}
 
 }

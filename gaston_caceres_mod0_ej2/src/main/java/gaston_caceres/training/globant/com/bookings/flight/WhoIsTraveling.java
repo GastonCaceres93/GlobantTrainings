@@ -4,19 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import gaston_caceres.training.globant.com.utils.ElementToValidate;
 import gaston_caceres.training.globant.com.utils.ValidationType;
 
 public class WhoIsTraveling {
 
-	private WebDriver webDriver;
-
-	public WhoIsTraveling(WebDriver webDriver) {
-		this.webDriver = webDriver;
-	}
-	
 	public Set<ElementToValidate> getElementsToValidateFlightReviewPage() {
 		Set<ElementToValidate> elements = new HashSet<ElementToValidate>();
 

@@ -149,8 +149,6 @@ public class PackageHotel {
 		hotel.setName(getHotelName(hotelSelected));
 		hotel.setPrice(getHotelPrice(hotelSelected));
 		hotel.setStars(getHotelStars(hotelSelected));
-		// hotel.setTelephone(getHotelTelephone(hotelSelected));
-		// hotel.setUserReviews(getHotelUserReviews(hotelSelected));
 	}
 
 	public HotelInfo getHotelInfo() {

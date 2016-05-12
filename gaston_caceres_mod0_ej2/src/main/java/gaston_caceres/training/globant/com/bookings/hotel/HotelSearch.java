@@ -14,7 +14,6 @@ public class HotelSearch {
 
 	private List<WebElement> hotels;
 
-	private WebElement hotel;
 	private String hotelSearched;
 
 	public HotelSearch(WebDriver driver, String hotelSearch) {
